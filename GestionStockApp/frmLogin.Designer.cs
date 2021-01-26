@@ -59,6 +59,7 @@ namespace GestionStockApp
             this.label2.Size = new System.Drawing.Size(116, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Identifiant";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -70,6 +71,7 @@ namespace GestionStockApp
             this.label3.Size = new System.Drawing.Size(158, 29);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mot de passe";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtIdentifiant
             // 
@@ -80,6 +82,7 @@ namespace GestionStockApp
             this.txtIdentifiant.Name = "txtIdentifiant";
             this.txtIdentifiant.Size = new System.Drawing.Size(430, 29);
             this.txtIdentifiant.TabIndex = 3;
+            this.txtIdentifiant.TextChanged += new System.EventHandler(this.txtIdentifiant_TextChanged);
             // 
             // txtMotDePasse
             // 
@@ -91,6 +94,7 @@ namespace GestionStockApp
             this.txtMotDePasse.Size = new System.Drawing.Size(430, 29);
             this.txtMotDePasse.TabIndex = 4;
             this.txtMotDePasse.UseSystemPasswordChar = true;
+            this.txtMotDePasse.TextChanged += new System.EventHandler(this.txtMotDePasse_TextChanged);
             // 
             // btnConnecter
             // 
@@ -116,6 +120,7 @@ namespace GestionStockApp
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(0, 29);
             this.lblMessage.TabIndex = 7;
+            this.lblMessage.Click += new System.EventHandler(this.lblMessage_Click);
             // 
             // cbAfficherMotDePasse
             // 
@@ -139,6 +144,7 @@ namespace GestionStockApp
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmLogin
             // 

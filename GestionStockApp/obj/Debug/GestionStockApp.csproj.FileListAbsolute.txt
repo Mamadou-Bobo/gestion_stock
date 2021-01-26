@@ -11,7 +11,6 @@ C:\Users\Mamadou Bobo\source\repos\GestionStock\GestionStockApp\bin\Debug\Renci.
 C:\Users\Mamadou Bobo\source\repos\GestionStock\GestionStockApp\bin\Debug\EntityFramework.xml
 C:\Users\Mamadou Bobo\source\repos\GestionStock\GestionStockApp\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Mamadou Bobo\source\repos\GestionStock\GestionStockApp\bin\Debug\Google.Protobuf.xml
-C:\Users\Mamadou Bobo\source\repos\GestionStock\GestionStockApp\bin\Debug\MySql.Data.xml
 C:\Users\Mamadou Bobo\source\repos\GestionStock\GestionStockApp\bin\Debug\MySql.Data.EntityFramework.xml
 C:\Users\Mamadou Bobo\source\repos\GestionStock\GestionStockApp\bin\Debug\Renci.SshNet.xml
 C:\Users\Mamadou Bobo\source\repos\GestionStock\GestionStockApp\bin\Debug\fr\EntityFramework.resources.dll
@@ -31,3 +30,4 @@ C:\Users\Mamadou Bobo\source\repos\GestionStock\GestionStockApp\obj\Debug\Gestio
 C:\Users\Mamadou Bobo\source\repos\GestionStock\GestionStockApp\obj\Debug\GestionStockApp.exe
 C:\Users\Mamadou Bobo\source\repos\GestionStock\GestionStockApp\obj\Debug\GestionStockApp.pdb
 C:\Users\Mamadou Bobo\source\repos\GestionStock\GestionStockApp\obj\Debug\GestionStockApp.frmMonCompte.resources
+C:\Users\Mamadou Bobo\source\repos\GestionStock\GestionStockApp\bin\Debug\fr\EntityFramework.SqlServer.resources.dll

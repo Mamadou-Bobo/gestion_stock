@@ -125,7 +125,37 @@ namespace GestionStockApp
             }
         }
 
-      
+       
+
+        private void txtIdentifiant_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMotDePasse_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblMessage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

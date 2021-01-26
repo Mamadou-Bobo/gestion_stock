@@ -118,6 +118,6 @@ namespace GestionStockApp
             dbProduit.DataSource = lesProduits.ToList();
         }
 
-
+        
     }
 }

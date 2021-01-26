@@ -30,10 +30,10 @@ namespace GestionStockApp
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -63,6 +63,7 @@ namespace GestionStockApp
             this.gestionstockDataSet = new GestionStockApp.gestionstockDataSet();
             this.lblCategorie = new System.Windows.Forms.Label();
             this.categorieTableAdapter = new GestionStockApp.gestionstockDataSetTableAdapters.categorieTableAdapter();
+            this.txtRecherche = new System.Windows.Forms.TextBox();
             this.categorieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dbProduit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categorieBindingSource1)).BeginInit();
@@ -73,7 +74,7 @@ namespace GestionStockApp
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 40);
+            this.label1.Location = new System.Drawing.Point(32, 553);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 20);
             this.label1.TabIndex = 0;
@@ -82,7 +83,7 @@ namespace GestionStockApp
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 125);
+            this.label2.Location = new System.Drawing.Point(32, 638);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 20);
             this.label2.TabIndex = 1;
@@ -91,7 +92,7 @@ namespace GestionStockApp
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 380);
+            this.label3.Location = new System.Drawing.Point(32, 893);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 20);
             this.label3.TabIndex = 2;
@@ -100,7 +101,7 @@ namespace GestionStockApp
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 210);
+            this.label4.Location = new System.Drawing.Point(32, 723);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 20);
             this.label4.TabIndex = 3;
@@ -109,7 +110,7 @@ namespace GestionStockApp
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 295);
+            this.label5.Location = new System.Drawing.Point(32, 808);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 20);
             this.label5.TabIndex = 4;
@@ -117,35 +118,35 @@ namespace GestionStockApp
             // 
             // txtLibelle
             // 
-            this.txtLibelle.Location = new System.Drawing.Point(36, 63);
+            this.txtLibelle.Location = new System.Drawing.Point(36, 576);
             this.txtLibelle.Name = "txtLibelle";
             this.txtLibelle.Size = new System.Drawing.Size(229, 26);
             this.txtLibelle.TabIndex = 5;
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(36, 148);
+            this.txtDescription.Location = new System.Drawing.Point(36, 661);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(229, 26);
             this.txtDescription.TabIndex = 6;
             // 
             // txtQuantite
             // 
-            this.txtQuantite.Location = new System.Drawing.Point(36, 233);
+            this.txtQuantite.Location = new System.Drawing.Point(36, 746);
             this.txtQuantite.Name = "txtQuantite";
             this.txtQuantite.Size = new System.Drawing.Size(229, 26);
             this.txtQuantite.TabIndex = 7;
             // 
             // txtQuantiteMinimale
             // 
-            this.txtQuantiteMinimale.Location = new System.Drawing.Point(36, 318);
+            this.txtQuantiteMinimale.Location = new System.Drawing.Point(36, 831);
             this.txtQuantiteMinimale.Name = "txtQuantiteMinimale";
             this.txtQuantiteMinimale.Size = new System.Drawing.Size(229, 26);
             this.txtQuantiteMinimale.TabIndex = 8;
             // 
             // txtPrix
             // 
-            this.txtPrix.Location = new System.Drawing.Point(36, 403);
+            this.txtPrix.Location = new System.Drawing.Point(36, 916);
             this.txtPrix.Name = "txtPrix";
             this.txtPrix.Size = new System.Drawing.Size(229, 26);
             this.txtPrix.TabIndex = 9;
@@ -154,17 +155,19 @@ namespace GestionStockApp
             // 
             this.dbProduit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dbProduit.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dbProduit.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dbProduit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbProduit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dbProduit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dbProduit.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbProduit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dbProduit.ColumnHeadersHeight = 50;
             this.dbProduit.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.txtID,
             this.txtLb,
@@ -173,32 +176,32 @@ namespace GestionStockApp
             this.txtQtMin,
             this.txtPr,
             this.txtCat});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("HP Simplified", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbProduit.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("HP Simplified", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbProduit.DefaultCellStyle = dataGridViewCellStyle6;
             this.dbProduit.EnableHeadersVisualStyles = false;
             this.dbProduit.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dbProduit.Location = new System.Drawing.Point(310, 63);
+            this.dbProduit.Location = new System.Drawing.Point(35, 98);
             this.dbProduit.MultiSelect = false;
             this.dbProduit.Name = "dbProduit";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbProduit.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbProduit.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dbProduit.RowHeadersWidth = 62;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("HP Simplified", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dbProduit.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("HP Simplified", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dbProduit.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dbProduit.RowTemplate.Height = 28;
-            this.dbProduit.Size = new System.Drawing.Size(1115, 672);
+            this.dbProduit.Size = new System.Drawing.Size(1194, 672);
             this.dbProduit.TabIndex = 10;
             // 
             // txtID
@@ -207,7 +210,6 @@ namespace GestionStockApp
             this.txtID.HeaderText = "ID";
             this.txtID.MinimumWidth = 8;
             this.txtID.Name = "txtID";
-            this.txtID.Width = 150;
             // 
             // txtLb
             // 
@@ -215,7 +217,6 @@ namespace GestionStockApp
             this.txtLb.HeaderText = "Libellé";
             this.txtLb.MinimumWidth = 8;
             this.txtLb.Name = "txtLb";
-            this.txtLb.Width = 150;
             // 
             // txtDesc
             // 
@@ -223,7 +224,6 @@ namespace GestionStockApp
             this.txtDesc.HeaderText = "Description";
             this.txtDesc.MinimumWidth = 8;
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Width = 150;
             // 
             // txtQt
             // 
@@ -231,7 +231,6 @@ namespace GestionStockApp
             this.txtQt.HeaderText = "Quantité";
             this.txtQt.MinimumWidth = 8;
             this.txtQt.Name = "txtQt";
-            this.txtQt.Width = 150;
             // 
             // txtQtMin
             // 
@@ -239,7 +238,6 @@ namespace GestionStockApp
             this.txtQtMin.HeaderText = "Quantité Minimale";
             this.txtQtMin.MinimumWidth = 8;
             this.txtQtMin.Name = "txtQtMin";
-            this.txtQtMin.Width = 150;
             // 
             // txtPr
             // 
@@ -247,7 +245,6 @@ namespace GestionStockApp
             this.txtPr.HeaderText = "Prix";
             this.txtPr.MinimumWidth = 8;
             this.txtPr.Name = "txtPr";
-            this.txtPr.Width = 150;
             // 
             // txtCat
             // 
@@ -255,11 +252,10 @@ namespace GestionStockApp
             this.txtCat.HeaderText = "Catégorie";
             this.txtCat.MinimumWidth = 8;
             this.txtCat.Name = "txtCat";
-            this.txtCat.Width = 150;
             // 
             // btnAjouter
             // 
-            this.btnAjouter.Location = new System.Drawing.Point(36, 831);
+            this.btnAjouter.Location = new System.Drawing.Point(468, 820);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(145, 48);
             this.btnAjouter.TabIndex = 11;
@@ -269,7 +265,7 @@ namespace GestionStockApp
             // 
             // btnModifier
             // 
-            this.btnModifier.Location = new System.Drawing.Point(211, 831);
+            this.btnModifier.Location = new System.Drawing.Point(643, 820);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(145, 48);
             this.btnModifier.TabIndex = 12;
@@ -279,7 +275,7 @@ namespace GestionStockApp
             // 
             // btnSupprimer
             // 
-            this.btnSupprimer.Location = new System.Drawing.Point(386, 831);
+            this.btnSupprimer.Location = new System.Drawing.Point(818, 820);
             this.btnSupprimer.Name = "btnSupprimer";
             this.btnSupprimer.Size = new System.Drawing.Size(145, 48);
             this.btnSupprimer.TabIndex = 13;
@@ -289,7 +285,7 @@ namespace GestionStockApp
             // 
             // btnEffacer
             // 
-            this.btnEffacer.Location = new System.Drawing.Point(561, 831);
+            this.btnEffacer.Location = new System.Drawing.Point(993, 820);
             this.btnEffacer.Name = "btnEffacer";
             this.btnEffacer.Size = new System.Drawing.Size(145, 48);
             this.btnEffacer.TabIndex = 14;
@@ -299,7 +295,7 @@ namespace GestionStockApp
             // 
             // btnSelectionner
             // 
-            this.btnSelectionner.Location = new System.Drawing.Point(661, 12);
+            this.btnSelectionner.Location = new System.Drawing.Point(764, 714);
             this.btnSelectionner.Name = "btnSelectionner";
             this.btnSelectionner.Size = new System.Drawing.Size(144, 38);
             this.btnSelectionner.TabIndex = 16;
@@ -309,9 +305,9 @@ namespace GestionStockApp
             // 
             // btnRechercher
             // 
-            this.btnRechercher.Location = new System.Drawing.Point(310, 12);
+            this.btnRechercher.Location = new System.Drawing.Point(412, 723);
             this.btnRechercher.Name = "btnRechercher";
-            this.btnRechercher.Size = new System.Drawing.Size(288, 35);
+            this.btnRechercher.Size = new System.Drawing.Size(288, 29);
             this.btnRechercher.TabIndex = 17;
             this.btnRechercher.Text = "Rechercher";
             this.btnRechercher.UseVisualStyleBackColor = true;
@@ -321,7 +317,7 @@ namespace GestionStockApp
             // 
             this.cbbCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbCategorie.FormattingEnabled = true;
-            this.cbbCategorie.Location = new System.Drawing.Point(36, 472);
+            this.cbbCategorie.Location = new System.Drawing.Point(36, 985);
             this.cbbCategorie.Name = "cbbCategorie";
             this.cbbCategorie.Size = new System.Drawing.Size(229, 28);
             this.cbbCategorie.TabIndex = 19;
@@ -339,7 +335,7 @@ namespace GestionStockApp
             // lblCategorie
             // 
             this.lblCategorie.AutoSize = true;
-            this.lblCategorie.Location = new System.Drawing.Point(31, 448);
+            this.lblCategorie.Location = new System.Drawing.Point(31, 961);
             this.lblCategorie.Name = "lblCategorie";
             this.lblCategorie.Size = new System.Drawing.Size(78, 20);
             this.lblCategorie.TabIndex = 20;
@@ -348,6 +344,14 @@ namespace GestionStockApp
             // categorieTableAdapter
             // 
             this.categorieTableAdapter.ClearBeforeFill = true;
+            // 
+            // txtRecherche
+            // 
+            this.txtRecherche.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtRecherche.Location = new System.Drawing.Point(891, 53);
+            this.txtRecherche.Name = "txtRecherche";
+            this.txtRecherche.Size = new System.Drawing.Size(227, 26);
+            this.txtRecherche.TabIndex = 21;
             // 
             // categorieBindingSource
             // 
@@ -360,6 +364,7 @@ namespace GestionStockApp
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1920, 1050);
             this.ControlBox = false;
+            this.Controls.Add(this.txtRecherche);
             this.Controls.Add(this.lblCategorie);
             this.Controls.Add(this.cbbCategorie);
             this.Controls.Add(this.btnRechercher);
@@ -424,6 +429,7 @@ namespace GestionStockApp
         private System.Windows.Forms.DataGridViewTextBoxColumn txtQtMin;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtPr;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtCat;
+        private System.Windows.Forms.TextBox txtRecherche;
     }
 }
 
