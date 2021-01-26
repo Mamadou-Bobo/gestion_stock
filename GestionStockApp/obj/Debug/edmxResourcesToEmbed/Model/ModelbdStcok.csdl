@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="gestionstockModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="produit">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="libelle" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="quantite" Type="Double" Nullable="false" />
+    <Property Name="quantiteMin" Type="Double" />
+    <Property Name="prix" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="gestionstockEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="produit" EntityType="Self.produit" />
+  </EntityContainer>
+</Schema>

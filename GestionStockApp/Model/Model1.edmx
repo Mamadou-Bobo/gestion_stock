@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="gestionstockModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="approvisionnement">
+          <Key>
+            <PropertyRef Name="idApp" />
+          </Key>
+          <Property Name="idApp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idProduit" Type="int" Nullable="false" />
+          <Property Name="qteProduit" Type="double" Nullable="false" />
+          <Property Name="dateApprovisionnement" Type="datetime" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="categorie">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="categorie" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="produit">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="libelle" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="description" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="quantite" Type="double" Nullable="false" />
+          <Property Name="quantiteMin" Type="double" />
+          <Property Name="prix" Type="double" Nullable="false" />
+          <Property Name="codeCat" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="utilisateur">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="login" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="profil" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="firstConnexion" Type="bool" Nullable="false" />
+          <Property Name="statut" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="createdAt" Type="datetime" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="connectedAt" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityContainer Name="gestionstockModelStoreContainer">
+          <EntitySet Name="approvisionnement" EntityType="Self.approvisionnement" Schema="gestionstock" store:Type="Tables" />
+          <EntitySet Name="categorie" EntityType="Self.categorie" Schema="gestionstock" store:Type="Tables" />
+          <EntitySet Name="produit" EntityType="Self.produit" Schema="gestionstock" store:Type="Tables" />
+          <EntitySet Name="utilisateur" EntityType="Self.utilisateur" Schema="gestionstock" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="gestionstockModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="categorie">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Categorie" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="produit">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="libelle" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="quantite" Type="Double" Nullable="false" />
+          <Property Name="quantiteMin" Type="Double" />
+          <Property Name="prix" Type="Double" Nullable="false" />
+          <Property Name="codeCat" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="utilisateur">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="login" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="profil" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="firstConnexion" Type="Boolean" Nullable="false" />
+          <Property Name="statut" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="createdAt" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="connectedAt" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="gestionstockEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="categorie" EntityType="Self.categorie" />
+          <EntitySet Name="produit" EntityType="Self.produit" />
+          <EntitySet Name="utilisateur" EntityType="Self.utilisateur" />
+          <EntitySet Name="approvisionnement" EntityType="gestionstockModel.approvisionnement" />
+        </EntityContainer>
+        <EntityType Name="approvisionnement">
+          <Key>
+            <PropertyRef Name="idApp" />
+          </Key>
+          <Property Name="idApp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idProduit" Type="Int32" Nullable="false" />
+          <Property Name="qteProduit" Type="Double" Nullable="false" />
+          <Property Name="dateApprovisionnement" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="gestionstockModelStoreContainer" CdmEntityContainer="gestionstockEntities">
+          <EntitySetMapping Name="categorie">
+            <EntityTypeMapping TypeName="gestionstockModel.categorie">
+              <MappingFragment StoreEntitySet="categorie">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Categorie" ColumnName="categorie" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="produit">
+            <EntityTypeMapping TypeName="gestionstockModel.produit">
+              <MappingFragment StoreEntitySet="produit">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="libelle" ColumnName="libelle" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="quantite" ColumnName="quantite" />
+                <ScalarProperty Name="quantiteMin" ColumnName="quantiteMin" />
+                <ScalarProperty Name="prix" ColumnName="prix" />
+                <ScalarProperty Name="codeCat" ColumnName="codeCat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="utilisateur">
+            <EntityTypeMapping TypeName="gestionstockModel.utilisateur">
+              <MappingFragment StoreEntitySet="utilisateur">
+                <ScalarProperty Name="connectedAt" ColumnName="connectedAt" />
+                <ScalarProperty Name="createdAt" ColumnName="createdAt" />
+                <ScalarProperty Name="statut" ColumnName="statut" />
+                <ScalarProperty Name="firstConnexion" ColumnName="firstConnexion" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="profil" ColumnName="profil" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="approvisionnement">
+            <EntityTypeMapping TypeName="gestionstockModel.approvisionnement">
+              <MappingFragment StoreEntitySet="approvisionnement">
+                <ScalarProperty Name="dateApprovisionnement" ColumnName="dateApprovisionnement" />
+                <ScalarProperty Name="qteProduit" ColumnName="qteProduit" />
+                <ScalarProperty Name="idProduit" ColumnName="idProduit" />
+                <ScalarProperty Name="idApp" ColumnName="idApp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

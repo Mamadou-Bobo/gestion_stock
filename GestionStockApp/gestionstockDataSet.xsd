@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="gestionstockDataSet" targetNamespace="http://tempuri.org/gestionstockDataSet.xsd" xmlns:mstns="http://tempuri.org/gestionstockDataSet.xsd" xmlns="http://tempuri.org/gestionstockDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="gestionstockConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="gestionstockConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GestionStockApp.Properties.Settings.GlobalReference.Default.gestionstockConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="categorieTableAdapter" GeneratorDataComponentClassName="categorieTableAdapter" Name="categorie" UserDataComponentName="categorieTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="gestionstockConnectionString (Settings)" DbObjectName="gestionstock.categorie" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `nomCategorie` FROM `categorie`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nomCategorie" DataSetColumn="nomCategorie" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="gestionstockDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="gestionstockDataSet" msprop:Generator_UserDSName="gestionstockDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="categorie" msprop:Generator_TableClassName="categorieDataTable" msprop:Generator_TableVarName="tablecategorie" msprop:Generator_TablePropName="categorie" msprop:Generator_RowDeletingName="categorieRowDeleting" msprop:Generator_RowChangingName="categorieRowChanging" msprop:Generator_RowEvHandlerName="categorieRowChangeEventHandler" msprop:Generator_RowDeletedName="categorieRowDeleted" msprop:Generator_UserTableName="categorie" msprop:Generator_RowChangedName="categorieRowChanged" msprop:Generator_RowEvArgName="categorieRowChangeEvent" msprop:Generator_RowClassName="categorieRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nomCategorie" msprop:Generator_ColumnVarNameInTable="columnnomCategorie" msprop:Generator_ColumnPropNameInRow="nomCategorie" msprop:Generator_ColumnPropNameInTable="nomCategorieColumn" msprop:Generator_UserColumnName="nomCategorie">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

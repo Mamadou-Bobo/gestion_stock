@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="gestionstockModelStoreContainer" CdmEntityContainer="gestionstockEntities">
+    <EntitySetMapping Name="categorie">
+      <EntityTypeMapping TypeName="gestionstockModel.categorie">
+        <MappingFragment StoreEntitySet="categorie">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Categorie" ColumnName="categorie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="produit">
+      <EntityTypeMapping TypeName="gestionstockModel.produit">
+        <MappingFragment StoreEntitySet="produit">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="quantite" ColumnName="quantite" />
+          <ScalarProperty Name="quantiteMin" ColumnName="quantiteMin" />
+          <ScalarProperty Name="prix" ColumnName="prix" />
+          <ScalarProperty Name="codeCat" ColumnName="codeCat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="utilisateur">
+      <EntityTypeMapping TypeName="gestionstockModel.utilisateur">
+        <MappingFragment StoreEntitySet="utilisateur">
+          <ScalarProperty Name="connectedAt" ColumnName="connectedAt" />
+          <ScalarProperty Name="createdAt" ColumnName="createdAt" />
+          <ScalarProperty Name="statut" ColumnName="statut" />
+          <ScalarProperty Name="firstConnexion" ColumnName="firstConnexion" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="profil" ColumnName="profil" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="approvisionnement">
+      <EntityTypeMapping TypeName="gestionstockModel.approvisionnement">
+        <MappingFragment StoreEntitySet="approvisionnement">
+          <ScalarProperty Name="dateApprovisionnement" ColumnName="dateApprovisionnement" />
+          <ScalarProperty Name="qteProduit" ColumnName="qteProduit" />
+          <ScalarProperty Name="idProduit" ColumnName="idProduit" />
+          <ScalarProperty Name="idApp" ColumnName="idApp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
